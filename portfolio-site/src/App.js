@@ -7,10 +7,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { NavbarBrand } from 'react-bootstrap';
 
+//Importing pages for rendering
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import AndroidApp from './pages/projects/AndroidApp'
+
 class App extends React.Component {
   
   constructor(props) {
@@ -20,7 +23,8 @@ class App extends React.Component {
       headerLinks: [
         {title: 'Home', path: '/'},
         {title: 'About', path: '/about'},
-        {title: 'Contact', path: '/contact'}
+        {title: 'Contact', path: '/contact'},
+        {title: 'AndroidApp', path: '/androidapp'}
       ],
       home: {
         title: 'Be Relentless',
@@ -32,6 +36,9 @@ class App extends React.Component {
       },
       contact: {
         title: 'Let\'s talk'
+      },
+      androidapp: {
+        title: 'My android app'
       }
     }
   }
@@ -56,6 +63,7 @@ class App extends React.Component {
         <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>} />
         <Route path="/about" exact render={() => <AboutPage  title={this.state.about.title} />} />
         <Route path="/contact" exact render={() => <ContactPage  title={this.state.contact.title} />} />
+        <Route path="/androidapp" exact render={() => <AndroidApp  title={this.state.androidapp.title} />} />
         <Footer />
         </Container>
       </Router> 

@@ -8,6 +8,7 @@ import Card from '../components/Card'
 import projectLogo from '../assets/images/project.jpg'
 import github from '../assets/images/github-logo.png'
 import linkedin from '../assets/images/linkedin.png'
+import androidLogo from '../assets/images/Android.png'
 
 class Carousel extends React.Component {
     constructor(props) {
@@ -16,10 +17,10 @@ class Carousel extends React.Component {
             items: [
                 {
                     id: 0,
-                    title: 'Projects',
-                    subTitle: 'Projects I have completed',
-                    imgSrc: projectLogo,
-                    link: '/projects',
+                    title: 'Android App',
+                    subTitle: 'Book searching app',
+                    imgSrc: androidLogo,
+                    link: '/androidapp',
                     selected: false
                 },
                 {
@@ -27,7 +28,7 @@ class Carousel extends React.Component {
                     title: 'Github',
                     subTitle: 'Projects I have completed',
                     imgSrc: github,
-                    link: '/',
+                    link: 'https://github.coventry.ac.uk/brhanuh',
                     selected: false
                 },
                 {
@@ -35,7 +36,7 @@ class Carousel extends React.Component {
                     title: 'LinkedIn',
                     subTitle: 'My LinkedIn profile',
                     imgSrc: linkedin,
-                    link: '/',
+                    link: 'https://www.linkedin.com/in/hanibal-brhanu-a2076a153/',
                     selected: false
                 }
             ]
